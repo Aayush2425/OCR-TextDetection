@@ -1,7 +1,8 @@
-streamlit
-easyocr
-numpy
-opencv-python-headless
-pillow
-torch==2.0.1
-torchvision==0.15.2
+streamlit>=1.20.0
+easyocr>=1.7.0
+numpy>=1.23.0
+opencv-python>=4.5.5
+Pillow>=9.0.0
+torch>=2.2.0
+torchvision>=0.15.0
+asyncio
