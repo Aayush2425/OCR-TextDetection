@@ -3,3 +3,5 @@ easyocr
 numpy
 opencv-python-headless
 pillow
+torch==2.0.1
+torchvision==0.15.2

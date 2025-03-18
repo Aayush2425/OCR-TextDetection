@@ -3,6 +3,7 @@ import easyocr
 import numpy as np
 import cv2
 from PIL import Image
+import asyncio
 
 def load_image(image_file):
     image = Image.open(image_file)
@@ -27,6 +28,12 @@ def detect_text(image):
     return image, results
 
 def main():
+    # Fix "RuntimeError: no running event loop"
+    try:
+        asyncio.get_running_loop()
+    except RuntimeError:
+        asyncio.set_event_loop(asyncio.new_event_loop())
+    
     st.title("OCR Text Detection App")
     st.write("Upload an image to detect text.")
     
